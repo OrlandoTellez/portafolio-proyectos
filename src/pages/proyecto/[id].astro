@@ -6,13 +6,11 @@ export function getStaticPaths() {
     {params: {id: '1'}},
     {params: {id: '2'}},
     {params: {id: '3'}},
-    // Agrega más rutas según sea necesario
   ];
 }
 
 const { id } = Astro.params;
 
-// Aquí podrías obtener los detalles del proyecto desde una base de datos o API
 const projectDetails = {
   '1': {
     title: 'Gym',
