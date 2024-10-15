@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {id: '1'}},
+    {params: {id: '2'}},
+    {params: {id: '3'}},
+    // Agrega más rutas según sea necesario
+  ];
+}
+
+const { id } = Astro.params;
+
+// Aquí podrías obtener los detalles del proyecto desde una base de datos o API
+const projectDetails = {
+  '1': {
+    title: 'Proyecto 1',
+    description: 'Descripción detallada del proyecto 1.',
+    image: 'https://via.placeholder.com/800x400',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    demoUrl: 'https://demo-proyecto1.com',
+    githubUrl: 'https://github.com/usuario/proyecto1'
+  },
+  '2': {
+    title: 'Proyecto 2',
+    description: 'Descripción detallada del proyecto 2.',
+    image: 'https://via.placeholder.com/800x400',
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    demoUrl: 'https://demo-proyecto2.com',
+    githubUrl: 'https://github.com/usuario/proyecto2'
+  },
+  '3': {
+    title: 'Proyecto 3',
+    description: 'Descripción detallada del proyecto 3.',
+    image: 'https://via.placeholder.com/800x400',
+    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
+    demoUrl: 'https://demo-proyecto3.com',
+    githubUrl: 'https://github.com/usuario/proyecto3'
+  },
+};
+
+const project = projectDetails[id];
+---
+
+<Layout title={`Proyecto ${id} - ${project.title}`}>
+	<main>
+		<h1>{project.title}</h1>
+		<img src={project.image} alt={project.title} />
+		<p>{project.description}</p>
+		<h2>Tecnologías utilizadas:</h2>
+		<ul>
+			{project.technologies.map((tech) => (
+				<li>{tech}</li>
+			))}
+		</ul>
+		<div class="buttons">
+			<a href={project.demoUrl} target="_blank" rel="noopener noreferrer" class="btn">Ver Demo</a>
+			<a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="btn">Ver en GitHub</a>
+		</div>
+		<a href="/" class="back-link">Volver al portafolio</a>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+	h1 {
+		font-size: 2.5rem;
+		color: rgb(var(--accent));
+		margin-bottom: 1rem;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 8px;
+		margin-bottom: 1rem;
+	}
+	p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		margin-bottom: 1rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+		color: rgb(var(--accent));
+		margin-top: 2rem;
+		margin-bottom: 0.5rem;
+	}
+	ul {
+		list-style-type: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 2rem;
+	}
+	li {
+		background: rgba(var(--accent-light), 0.2);
+		color: rgb(var(--accent));
+		padding: 0.3rem 0.8rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+	}
+	.buttons {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 2rem;
+	}
+	.btn {
+		display: inline-block;
+		background: rgb(var(--accent));
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		text-decoration: none;
+		transition: background-color 0.3s ease;
+	}
+	.btn:hover {
+		background: rgb(var(--accent-dark));
+	}
+	.back-link {
+		display: inline-block;
+		margin-top: 1rem;
+		color: rgb(var(--accent));
+		text-decoration: none;
+	}
+	.back-link:hover {
+		text-decoration: underline;
+	}
+</style>

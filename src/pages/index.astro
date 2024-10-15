@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+	{
+		title: 'Proyecto 1',
+		description: 'Descripción breve del proyecto 1.',
+		image: 'https://via.placeholder.com/300x200',
+		url: '/proyecto/1'
+	},
+	{
+		title: 'Proyecto 2',
+		description: 'Descripción breve del proyecto 2.',
+		image: 'https://via.placeholder.com/300x200',
+		url: '/proyecto/2'
+	},
+	{
+		title: 'Proyecto 3',
+		description: 'Descripción breve del proyecto 3.',
+		image: 'https://via.placeholder.com/300x200',
+		url: '/proyecto/3'
+	},
+	// Agrega más proyectos aquí
+];
+---
+
+<Layout title="Mi Portafolio">
+	<main>
+		<h1>Mi Portafolio de Proyectos</h1>
+		<p>Bienvenido a mi portafolio. Aquí encontrarás una selección de mis mejores proyectos web.</p>
+		
+		<div class="project-grid">
+			{projects.map((project) => (
+				<ProjectCard
+					title={project.title}
+					description={project.description}
+					image={project.image}
+					url={project.url}
+				/>
+			))}
+		</div>
+	</main>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color: rgb(var(--accent));
+	}
+	p {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+</style>
