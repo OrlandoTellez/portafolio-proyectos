@@ -1,63 +1,48 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-export function getStaticPaths() {
-  return [
-    {params: {id: '1'}},
-    {params: {id: '2'}},
-    {params: {id: '3'}},
-  ];
+// Definir el tipo de los parámetros
+interface Params {
+  id: string;
 }
 
-const { id } = Astro.params;
+// Asegurarse de que Astro.params tiene el tipo correcto
+const params = Astro.params as Params; // Type assertion
+const response = await fetch(`http://localhost:4321/api/proyectos.json`);
+const proyectos = await response.json();
 
-const projectDetails = {
-  '1': {
-    title: 'Gym',
-    description: 'Este es la primera página web realizada para el reto de 100 páginas web. Se trata de un sitio de gimnasio donde el negocio puede ofrecer sus servicios, en este caso, sesiones de ejercicios',
-    image: '/img/proyecto-gym.png',
-    technologies: ['Astro', 'Javascript', 'CSS'],
-    demoUrl: 'https://gym-plantilla.vercel.app/',
-    githubUrl: 'https://github.com/OrlandoTellez/gym'
-  },
-  '2': {
-    title: 'Proyecto 2',
-    description: 'Descripción detallada del proyecto 2.',
-    image: 'https://via.placeholder.com/800x400',
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    demoUrl: 'https://demo-proyecto2.com',
-    githubUrl: 'https://github.com/usuario/proyecto2'
-  },
-  '3': {
-    title: 'Proyecto 3',
-    description: 'Descripción detallada del proyecto 3.',
-    image: 'https://via.placeholder.com/800x400',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    demoUrl: 'https://demo-proyecto3.com',
-    githubUrl: 'https://github.com/usuario/proyecto3'
-  },
-};
+// Asegurarse de que params.id no sea undefined
+if (!params.id) {
+  throw new Error("El ID del proyecto no está disponible.");
+}
 
-const project = projectDetails[id];
+const project = proyectos.find((p) => p.id === params.id);
+
+export async function getStaticPaths() {
+  const proyectos = await fetch(`http://localhost:4321/api/proyectos.json`).then((res) => res.json());
+  const paths = proyectos.map((project) => ({ params: { id: project.id } }));
+  return paths;
+}
+
 ---
 
-<Layout title={`Proyecto ${id} - ${project.title}`}>
-	<main>
-		<h1>{project.title}</h1>
-		<img src={project.image} alt={project.title} />
-		<p>{project.description}</p>
-		<h2>Tecnologías utilizadas:</h2>
-		<ul>
-			{project.technologies.map((tech) => (
-				<li>{tech}</li>
-			))}
-		</ul>
-		<div class="buttons">
-			<a href={project.demoUrl} target="_blank" rel="noopener noreferrer" class="btn">Ver Demo</a>
-			<a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="btn">Ver en GitHub</a>
-		</div>
-		<a href="/" class="back-link">Volver al portafolio</a>
-	</main>
+<Layout title={`Proyecto ${project.id} - ${project.title}`}>
+  <main>
+    <h1>{project.title}</h1>
+    <img src={project.image} alt={project.title} />
+    <p>{project.description}</p>
+    <h2>Tecnologías utilizadas:</h2>
+    <ul>
+      {project.technologies.map((tech) => (
+        <li>{tech}</li>
+      ))}
+    </ul>
+    <div class="buttons">
+      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" class="btn">Ver Demo</a>
+      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="btn">Ver en GitHub</a>
+    </div>
+    <a href="/" class="back-link">Volver al portafolio</a>
+  </main>
 </Layout>
 
 <style>

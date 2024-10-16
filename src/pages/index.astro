@@ -2,27 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 
-const projects = [
-	{
-		title: 'Gym',
-		description: 'Sitio web de gimnasio',
-		image: '/img/proyecto-gym.png',
-		url: '/proyecto/1'
-	},
-	{
-		title: 'Proyecto 2',
-		description: 'Descripción breve del proyecto 2.',
-		image: 'https://via.placeholder.com/300x200',
-		url: '/proyecto/2'
-	},
-	{
-		title: 'Proyecto 3',
-		description: 'Descripción breve del proyecto 3.',
-		image: 'https://via.placeholder.com/300x200',
-		url: '/proyecto/3'
-	},
-	// Agrega más proyectos aquí
-];
+const response = await fetch("http://localhost:4321/api/proyectos.json");
+const proyectos = await response.json()
 ---
 
 <Layout title="Mi Portafolio">
@@ -31,10 +12,10 @@ const projects = [
 		<p>Bienvenido a mi portafolio. Aquí encontrarás una selección de mis mejores proyectos web.</p>
 		
 		<div class="project-grid">
-			{projects.map((project) => (
+			{proyectos.map((project) => (
 				<ProjectCard
 					title={project.title}
-					description={project.description}
+					description={project.descripcionCorta}
 					image={project.image}
 					url={project.url}
 				/>
