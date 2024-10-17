@@ -1,17 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-// Definir el tipo de los parámetros
 interface Params {
   id: string;
 }
 
-// Asegurarse de que Astro.params tiene el tipo correcto
-const params = Astro.params as Params; // Type assertion
+const params = Astro.params as Params; 
 const response = await fetch(`http://localhost:4321/api/proyectos.json`);
 const proyectos = await response.json();
 
-// Asegurarse de que params.id no sea undefined
 if (!params.id) {
   throw new Error("El ID del proyecto no está disponible.");
 }
