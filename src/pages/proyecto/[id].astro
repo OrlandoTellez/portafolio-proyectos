@@ -1,26 +1,20 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-interface Params {
-  id: string;
-}
 
-const params = Astro.params as Params; 
-const response = await fetch(`http://localhost:4321/api/proyectos.json`);
-const proyectos = await response.json();
+const { id } = Astro.params; 
+export const url = "http://localhost:4321/api/proyectos.json"
+const response = await fetch(url); 
+const projects = await response.json(); 
+const project = projects.find(p => p.id === id); 
 
-if (!params.id) {
-  throw new Error("El ID del proyecto no está disponible.");
-}
-
-const project = proyectos.find((p) => p.id === params.id);
 
 export async function getStaticPaths() {
-  const proyectos = await fetch(`http://localhost:4321/api/proyectos.json`).then((res) => res.json());
-  const paths = proyectos.map((project) => ({ params: { id: project.id } }));
-  return paths;
+    const response = await fetch(url); 
+    const projects = await response.json(); 
+    const paths = projects.map(project => ({ params: { id: project.id } })); 
+    return paths; 
 }
-
 ---
 
 <Layout title={`Proyecto ${project.id} - ${project.title}`}>
@@ -43,72 +37,72 @@ export async function getStaticPaths() {
 </Layout>
 
 <style>
-	main {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 2rem;
-	}
-	h1 {
-		font-size: 2.5rem;
-		color: rgb(var(--accent));
-		margin-bottom: 1rem;
-	}
-	img {
-		width: 100%;
-		height: auto;
-		border-radius: 8px;
-		margin-bottom: 1rem;
-	}
-	p {
-		font-size: 1.1rem;
-		line-height: 1.6;
-		margin-bottom: 1rem;
-	}
-	h2 {
-		font-size: 1.5rem;
-		color: rgb(var(--accent));
-		margin-top: 2rem;
-		margin-bottom: 0.5rem;
-	}
-	ul {
-		list-style-type: none;
-		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		margin-bottom: 2rem;
-	}
-	li {
-		background: rgba(var(--accent-light), 0.2);
-		color: rgb(var(--accent));
-		padding: 0.3rem 0.8rem;
-		border-radius: 20px;
-		font-size: 0.9rem;
-	}
-	.buttons {
-		display: flex;
-		gap: 1rem;
-		margin-bottom: 2rem;
-	}
-	.btn {
-		display: inline-block;
-		background: rgb(var(--accent));
-		color: white;
-		padding: 0.5rem 1rem;
-		border-radius: 4px;
-		text-decoration: none;
-		transition: background-color 0.3s ease;
-	}
-	.btn:hover {
-		background: rgb(var(--accent-dark));
-	}
-	.back-link {
-		display: inline-block;
-		margin-top: 1rem;
-		color: rgb(var(--accent));
-		text-decoration: none;
-	}
-	.back-link:hover {
-		text-decoration: underline;
-	}
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: rgb(var(--accent));
+    margin-bottom: 1rem;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    color: rgb(var(--accent));
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  li {
+    background: rgba(var(--accent-light), 0.2);
+    color: rgb(var(--accent));
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .btn {
+    display: inline-block;
+    background: rgb(var(--accent));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background: rgb(var(--accent-dark));
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: rgb(var(--accent));
+    text-decoration: none;
+  }
+  .back-link:hover {
+    text-decoration: underline;
+  }
 </style>
