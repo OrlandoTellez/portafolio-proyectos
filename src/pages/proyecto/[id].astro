@@ -1,20 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { projects } from '../api/proyectos.json';
 
-
-const { id } = Astro.params; 
-export const url = "http://localhost:4321/api/proyectos.json"
-const response = await fetch(url); 
-const projects = await response.json(); 
-const project = projects.find(p => p.id === id); 
-
-
-export async function getStaticPaths() {
-    const response = await fetch(url); 
-    const projects = await response.json(); 
-    const paths = projects.map(project => ({ params: { id: project.id } })); 
-    return paths; 
+export function getStaticPaths() {
+  return projects.map(project => ({
+    params: { id: project.id },
+    props: { project },
+  }));
 }
+
+const { project } = Astro.props;
 ---
 
 <Layout title={`Proyecto ${project.id} - ${project.title}`}>

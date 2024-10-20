@@ -1,9 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-
-const response = await fetch("http://localhost:4321/api/proyectos.json");
-const proyectos = await response.json()
+import { projects } from './api/proyectos.json';
 ---
 
 <Layout title="Mi Portafolio">
@@ -12,7 +10,7 @@ const proyectos = await response.json()
 		<p>Bienvenido a mi portafolio. Aquí encontrarás una selección de mis mejores proyectos web.</p>
 		
 		<div class="project-grid">
-			{proyectos.map((project) => (
+			{projects.map((project) => (
 				<ProjectCard
 					title={project.title}
 					description={project.descripcionCorta}
