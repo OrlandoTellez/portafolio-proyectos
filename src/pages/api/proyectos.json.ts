@@ -32,6 +32,50 @@ export const projects = [
       demoUrl: 'https://react-reto.vercel.app/',
       githubUrl: 'https://github.com/OrlandoTellez/landingPageReto'
     },
+    {
+      id: '4',
+      title: 'Pokedex',
+      descripcionCorta: 'Pokedex desarrollada con HTML, CSS y JavaScript. Siguiendo el curso de freeCodeCamp ',
+      image: '/img/proyecto-pokeapi.png',
+      url: '/proyecto/4',
+      description: 'Este es la primera página web realizada para el reto de 100 páginas web. Se trata de un sitio de gimnasio donde el negocio puede ofrecer sus servicios, en este caso, sesiones de ejercicios',
+      technologies: ['HTML', 'CSS', 'Javascript'],
+      demoUrl: 'https://poke-dex-practica.vercel.app/',
+      githubUrl: 'https://github.com/OrlandoTellez/PokeDexPractica'
+    },
+    {
+      id: '5',
+      title: 'Calculadora',
+      descripcionCorta: 'Pokedex desarrollada con HTML, CSS y JavaScript. Siguiendo el curso de freeCodeCamp',
+      image: '/img/proyecto-calculadora.png',
+      url: '/proyecto/5',
+      description: 'Este es la primera página web realizada para el reto de 100 páginas web. Se trata de un sitio de gimnasio donde el negocio puede ofrecer sus servicios, en este caso, sesiones de ejercicios',
+      technologies: ['HTML', 'CSS', 'Javascript'],
+      demoUrl: 'https://orlandotellez.github.io/proyecto-calculadora/',
+      githubUrl: 'https://github.com/OrlandoTellez/proyecto-calculadora'
+    },
+    {
+      id: '6',
+      title: 'Pagina Reviews',
+      descripcionCorta: 'Pokedex desarrollada con HTML, CSS y JavaScript. Siguiendo el curso de freeCodeCamp ',
+      image: '/img/proyecto-paginaReviews.png',
+      url: '/proyecto/5',
+      description: 'Este es la primera página web realizada para el reto de 100 páginas web. Se trata de un sitio de gimnasio donde el negocio puede ofrecer sus servicios, en este caso, sesiones de ejercicios',
+      technologies: ['HTML', 'CSS', 'Javascript'],
+      demoUrl: 'https://orlandotellez.github.io/proyecto-calculadora/',
+      githubUrl: 'https://github.com/OrlandoTellez/proyecto-calculadora'
+    },
+    {
+      id: '7',
+      title: 'Pagina Cafe',
+      descripcionCorta: 'Pokedex desarrollada con HTML, CSS y JavaScript. Siguiendo el curso de freeCodeCamp ',
+      image: '/img/proyecto-cafe.png',
+      url: '/proyecto/5',
+      description: 'Este es la primera página web realizada para el reto de 100 páginas web. Se trata de un sitio de gimnasio donde el negocio puede ofrecer sus servicios, en este caso, sesiones de ejercicios',
+      technologies: ['HTML', 'CSS', 'Javascript'],
+      demoUrl: 'https://orlandotellez.github.io/proyecto-calculadora/',
+      githubUrl: 'https://github.com/OrlandoTellez/proyecto-calculadora'
+    },
   ];
   
   export const GET = async () => {
