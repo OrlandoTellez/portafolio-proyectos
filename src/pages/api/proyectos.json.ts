@@ -59,7 +59,7 @@ export const projects = [
       title: 'Pagina Reviews',
       descripcionCorta: 'Pokedex desarrollada con HTML, CSS y JavaScript. Siguiendo el curso de freeCodeCamp ',
       image: '/img/proyecto-paginaReviews.png',
-      url: '/proyecto/5',
+      url: '/proyecto/6',
       description: 'Este es la primera página web realizada para el reto de 100 páginas web. Se trata de un sitio de gimnasio donde el negocio puede ofrecer sus servicios, en este caso, sesiones de ejercicios',
       technologies: ['HTML', 'CSS', 'Javascript'],
       demoUrl: 'https://orlandotellez.github.io/proyecto-calculadora/',
@@ -67,14 +67,25 @@ export const projects = [
     },
     {
       id: '7',
-      title: 'Pagina Cafe',
+      title: 'Cafe Api',
       descripcionCorta: 'Pokedex desarrollada con HTML, CSS y JavaScript. Siguiendo el curso de freeCodeCamp ',
       image: '/img/proyecto-cafe.png',
-      url: '/proyecto/5',
+      url: '/proyecto/7',
       description: 'Este es la primera página web realizada para el reto de 100 páginas web. Se trata de un sitio de gimnasio donde el negocio puede ofrecer sus servicios, en este caso, sesiones de ejercicios',
       technologies: ['HTML', 'CSS', 'Javascript'],
-      demoUrl: 'https://orlandotellez.github.io/proyecto-calculadora/',
-      githubUrl: 'https://github.com/OrlandoTellez/proyecto-calculadora'
+      demoUrl: 'https://proyecto-cafe-listado.vercel.app/',
+      githubUrl: 'https://github.com/OrlandoTellez/proyecto-cafeListado'
+    },
+    {
+      id: '8',
+      title: 'Temporizador',
+      descripcionCorta: 'Pokedex desarrollada con HTML, CSS y JavaScript. Siguiendo el curso de freeCodeCamp ',
+      image: '/img/proyecto-temporizador.png',
+      url: '/proyecto/8',
+      description: 'Este es la primera página web realizada para el reto de 100 páginas web. Se trata de un sitio de gimnasio donde el negocio puede ofrecer sus servicios, en este caso, sesiones de ejercicios',
+      technologies: ['HTML', 'CSS', 'Javascript'],
+      demoUrl: 'https://reto-temporizador.vercel.app/',
+      githubUrl: 'https://github.com/OrlandoTellez/reto-temporizador'
     },
   ];
   
