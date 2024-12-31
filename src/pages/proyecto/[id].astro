@@ -39,7 +39,7 @@ const { project } = Astro.props;
   }
   h1 {
     font-size: 2.5rem;
-    color: rgb(var(--accent));
+    color: var(--color-principal);
     margin-bottom: 1rem;
   }
   img {
@@ -55,7 +55,7 @@ const { project } = Astro.props;
   }
   h2 {
     font-size: 1.5rem;
-    color: rgb(var(--accent));
+    color: var(--color-principal);
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
@@ -68,8 +68,8 @@ const { project } = Astro.props;
     margin-bottom: 2rem;
   }
   li {
-    background: rgba(var(--accent-light), 0.2);
-    color: rgb(var(--accent));
+    background: var(--color-principal);
+    color: var(--color-principal);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -81,7 +81,7 @@ const { project } = Astro.props;
   }
   .btn {
     display: inline-block;
-    background: rgb(var(--accent));
+    background: var(--color-principal);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -89,12 +89,12 @@ const { project } = Astro.props;
     transition: background-color 0.3s ease;
   }
   .btn:hover {
-    background: rgb(var(--accent-dark));
+    background: var(--color-principal);
   }
   .back-link {
     display: inline-block;
     margin-top: 1rem;
-    color: rgb(var(--accent));
+    color: var(--color-principal);
     text-decoration: none;
   }
   .back-link:hover {

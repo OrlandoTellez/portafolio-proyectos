@@ -2,13 +2,27 @@
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { projects } from './api/proyectos.json';
+import iconoGithub from "../assets/iconos/github.svg";
+import iconoPorfolio from "../assets/iconos/porfolio.svg";
 ---
 
 <Layout title="Mi Portafolio">
 	<main>
 		<h1>Mi Portafolio de Proyectos</h1>
-		<p>Bienvenido a mi portafolio. Aquí encontrarás una selección de mis mejores proyectos web.</p>
+		<p>Bienvenido a mi portafolio. Aquí encontrarás todos los proyectos en los cuales he trabajado</p>
 		
+		<div class="botones-social">
+			<a class="a-porfolio" href="https://portafolio-orlando-tellez-ot.vercel.app/">
+				<img src={iconoPorfolio.src} alt="icono-porfolio">
+				<h4>Portafolio personal</h4>
+			</a>
+			<a class="a-github" href="https://github.com/OrlandoTellez">
+				<img src={iconoGithub.src} alt="icono-github">
+				<h4>Github</h4>
+			</a>
+			
+		</div>
+
 		<div class="project-grid">
 			{projects.map((project) => (
 				<ProjectCard
@@ -24,13 +38,16 @@ import { projects } from './api/proyectos.json';
 </Layout>
 
 <style>
+	main{
+		width: 100%;
+	}
 	h1 {
 		font-size: 3rem;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
-		color: rgb(var(--accent));
+		color: var(--color-principal);
 	}
 	p {
 		text-align: center;
@@ -40,5 +57,39 @@ import { projects } from './api/proyectos.json';
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem;
+		margin-top: 30px;
+	}
+
+	.botones-social{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		padding: 20px;
+	}
+
+	.botones-social a{
+		padding: 10px;
+		border-radius: 10px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 10px;
+	}
+	
+	.a-github{
+		background-color: #171717;
+		color: white;
+	}
+
+	.a-porfolio{
+		background-color: var(--color-principal);
+		color: white;
+	}
+
+	img{
+		display: block;
+		width: 20px;
 	}
 </style>
