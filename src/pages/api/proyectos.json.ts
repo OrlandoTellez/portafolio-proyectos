@@ -29,8 +29,8 @@ export const projects = [
     url: '/proyecto/3',
     description: 'Página inicial que puede ser utilizada para presentar un servicio o producto. Desarrollada con HTML, CSS y JavaScript, destaca por su diseño limpio y funcional.',
     technologies: ['HTML', 'CSS', 'Javascript'],
-    demoUrl: 'https://react-reto.vercel.app/',
-    githubUrl: 'https://github.com/OrlandoTellez/landingPageReto'
+    demoUrl: 'https://orlandotellez.github.io/desafio-simpleHomepage/',
+    githubUrl: 'https://github.com/OrlandoTellez/desafio-simpleHomepage'
   },
   {
     id: '4',
@@ -62,8 +62,8 @@ export const projects = [
     url: '/proyecto/6',
     description: 'Esta página permite a los usuarios dejar opiniones y calificaciones sobre servicios o productos. Desarrollada con HTML, CSS y JavaScript, cuenta con un diseño atractivo y funcional.',
     technologies: ['HTML', 'CSS', 'Javascript'],
-    demoUrl: 'https://orlandotellez.github.io/proyecto-calculadora/',
-    githubUrl: 'https://github.com/OrlandoTellez/proyecto-calculadora'
+    demoUrl: 'https://orlandotellez.github.io/desafio-pageTestimonio/',
+    githubUrl: 'https://github.com/OrlandoTellez/desafio-pageTestimonio'
   },
   {
     id: '7',
