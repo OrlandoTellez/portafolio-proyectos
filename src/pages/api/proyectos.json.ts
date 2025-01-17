@@ -97,6 +97,17 @@ export const projects = [
     technologies: ['HTML', 'CSS', 'Javascript'],
     demoUrl: 'https://orlandotellez.github.io/pagina-productosCarritoCompra/',
     githubUrl: 'https://github.com/OrlandoTellez/pagina-productosCarritoCompra'
+  },
+  {
+    id: '10',
+    title: 'Twitter Clon',
+    descripcionCorta: 'Toda la interfaz de twitter(x)',
+    image: '/img/proyecto-twiterClon.png',
+    url: '/proyecto/10',
+    description: 'Página que presenta toda la interfaz gráfica de la red social Twitter(x)',
+    technologies: ['HTML', 'CSS', 'Javascript'],
+    demoUrl: 'https://twiter-clon.vercel.app/',
+    githubUrl: 'https://github.com/OrlandoTellez/twiter-clon'
   }
   ];
   
