@@ -1,5 +1,16 @@
 export const projects = [
   {
+    id: '12',
+    title: 'CatPedia',
+    descripcionCorta: '',
+    image: '/img/proyecto-catPedia.png',
+    url: '/proyecto/12',
+    description: '',
+    technologies: ['NodeJs', 'CSS', 'Javascript'],
+    demoUrl: 'https://pagina-de-gatos-nodejs-production.up.railway.app',
+    githubUrl: 'https://github.com/OrlandoTellez/pagina-de-gatos-NodeJs'
+  },
+  {
     id: '11',
     title: 'Trello App',
     descripcionCorta: '',
