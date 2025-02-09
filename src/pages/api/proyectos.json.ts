@@ -1,47 +1,58 @@
 export const projects = [
   {
-    id: '12',
+    id: '13',
     title: 'CatPedia',
     descripcionCorta: '',
     image: '/img/proyecto-catPedia.png',
-    url: '/proyecto/12',
+    url: '/proyecto/13',
     description: '',
     technologies: ['NodeJs', 'CSS', 'Javascript'],
     demoUrl: 'https://pagina-de-gatos-nodejs-production.up.railway.app',
     githubUrl: 'https://github.com/OrlandoTellez/pagina-de-gatos-NodeJs'
   },
   {
-    id: '11',
+    id: '12',
     title: 'Trello App',
     descripcionCorta: '',
     image: '/img/proyecto-trelloApp.png',
-    url: '/proyecto/11',
+    url: '/proyecto/12',
     description: '',
     technologies: ['HTML', 'CSS', 'Javascript'],
     demoUrl: 'https://orlandotellez.github.io/trello-app/',
     githubUrl: 'https://github.com/OrlandoTellez/trello-app'
   },
   {
-    id: '10',
+    id: '11',
     title: 'Twitter Clon',
     descripcionCorta: 'Toda la interfaz de twitter(x)',
     image: '/img/proyecto-twiterClon.png',
-    url: '/proyecto/10',
+    url: '/proyecto/11',
     description: 'Página que presenta toda la interfaz gráfica de la red social Twitter(x)',
     technologies: ['HTML', 'CSS', 'Javascript'],
     demoUrl: 'https://twiter-clon.vercel.app/',
     githubUrl: 'https://github.com/OrlandoTellez/twiter-clon'
   },
   {
-    id: '9',
+    id: '10',
     title: 'Página de postres',
     descripcionCorta: 'Catálogo interactivo de postres con carrito de compras.',
     image: '/img/proyecto-carritoCompra.png',
-    url: '/proyecto/9',
+    url: '/proyecto/10',
     description: 'Página que presenta un catálogo de postres con la funcionalidad de un carrito de compras. Desarrollada con HTML, CSS y JavaScript, es ideal para negocios de repostería.',
     technologies: ['HTML', 'CSS', 'Javascript'],
     demoUrl: 'https://orlandotellez.github.io/pagina-productosCarritoCompra/',
     githubUrl: 'https://github.com/OrlandoTellez/pagina-productosCarritoCompra'
+  },
+  {
+    id: '9',
+    title: 'Generador de contraseñas',
+    descripcionCorta: '',
+    image: '/img/proyecto-generadorPassword.png',
+    url: '/proyecto/9',
+    description: '',
+    technologies: ['HTML', 'CSS', 'Javascript'],
+    demoUrl: 'https://pagina-de-gatos-nodejs-production.up.railway.app',
+    githubUrl: 'https://github.com/OrlandoTellez/pagina-de-gatos-NodeJs'
   },
   {
     id: '8',
