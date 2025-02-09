@@ -29,7 +29,7 @@ export const projects = [
     url: '/proyecto/11',
     description: 'Página que presenta toda la interfaz gráfica de la red social Twitter(x)',
     technologies: ['HTML', 'CSS', 'Javascript'],
-    demoUrl: 'https://twiter-clon.vercel.app/',
+    demoUrl: 'https://twiter-clon-production.up.railway.app/',
     githubUrl: 'https://github.com/OrlandoTellez/twiter-clon'
   },
   {
