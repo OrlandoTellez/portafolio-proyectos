@@ -1,5 +1,16 @@
 export const projects = [
   {
+    id: '14',
+    title: 'Blog para aprender JavaScript',
+    descripcionCorta: '',
+    image: '/img/proyecto-blogJs.png',
+    url: '/proyecto/14',
+    description: '',
+    technologies: ['Astro', 'TypeScript'],
+    demoUrl: 'https://blog-aprender-js.vercel.app/',
+    githubUrl: 'https://github.com/OrlandoTellez/blog-aprenderJS'
+  },
+  {
     id: '13',
     title: 'CatPedia',
     descripcionCorta: '',
