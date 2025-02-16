@@ -1,5 +1,16 @@
 export const projects = [
   {
+    id: '15',
+    title: 'Filtro de imagenes con JS',
+    descripcionCorta: '',
+    image: '/img/proyecto-filtroImagenes.png',
+    url: '/proyecto/15',
+    description: '',
+    technologies: ['Astro', 'TypeScript'],
+    demoUrl: 'https://filtro-imagenes-production.up.railway.app/',
+    githubUrl: 'https://github.com/OrlandoTellez/filtro-imagenes'
+  },
+  {
     id: '14',
     title: 'Blog para aprender JavaScript',
     descripcionCorta: '',
