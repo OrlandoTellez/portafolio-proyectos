@@ -1,12 +1,23 @@
 export const projects = [
   {
+    id: '16',
+    title: 'Filtro de imagenes con JS',
+    descripcionCorta: '',
+    image: '/img/proyecto-hardwareWeb.png',
+    url: '/proyecto/16',
+    description: '',
+    technologies: ['NextJs', 'TypeScript'],
+    demoUrl: 'https://hardware-web.vercel.app/',
+    githubUrl: 'https://github.com/OrlandoTellez/hardware-web'
+  },
+  {
     id: '15',
     title: 'Filtro de imagenes con JS',
     descripcionCorta: '',
     image: '/img/proyecto-filtroImagenes.png',
     url: '/proyecto/15',
     description: '',
-    technologies: ['Astro', 'TypeScript'],
+    technologies: ['NodeJs', 'CSS', 'Javascript', 'HTML'],
     demoUrl: 'https://filtro-imagenes-production.up.railway.app/',
     githubUrl: 'https://github.com/OrlandoTellez/filtro-imagenes'
   },
@@ -94,7 +105,7 @@ export const projects = [
     image: '/img/proyecto-cafe.png',
     url: '/proyecto/7',
     description: 'Proyecto que muestra un listado de cafés disponibles, generado dinámicamente desde una API. Desarrollado con HTML, CSS y JavaScript, destaca por su diseño moderno y su funcionalidad.',
-    technologies: ['HTML', 'CSS', 'Javascript'],
+    technologies: ['Astro', 'HTML', 'CSS', 'Javascript'],
     demoUrl: 'https://proyecto-cafe-listado.vercel.app/',
     githubUrl: 'https://github.com/OrlandoTellez/proyecto-cafeListado'
   },
