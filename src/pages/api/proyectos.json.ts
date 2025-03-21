@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: '16',
-    title: 'Filtro de imagenes con JS',
+    title: 'Hardware Web',
     descripcionCorta: '',
     image: '/img/proyecto-hardwareWeb.png',
     url: '/proyecto/16',
