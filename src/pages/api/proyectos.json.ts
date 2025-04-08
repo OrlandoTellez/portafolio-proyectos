@@ -40,7 +40,7 @@ export const projects = [
     url: '/proyecto/13',
     description: '',
     technologies: ['NodeJs', 'CSS', 'Javascript'],
-    demoUrl: 'https://pagina-de-gatos-nodejs-production.up.railway.app',
+    demoUrl: 'https://pagina-de-gatos-node-js.vercel.app/',
     githubUrl: 'https://github.com/OrlandoTellez/pagina-de-gatos-NodeJs'
   },
   {
@@ -62,7 +62,7 @@ export const projects = [
     url: '/proyecto/11',
     description: 'Página que presenta toda la interfaz gráfica de la red social Twitter(x)',
     technologies: ['HTML', 'CSS', 'Javascript'],
-    demoUrl: 'https://twiter-clon-production.up.railway.app/',
+    demoUrl: 'https://twiter-clon.onrender.com/',
     githubUrl: 'https://github.com/OrlandoTellez/twiter-clon'
   },
   {
