@@ -1,5 +1,16 @@
 export const projects = [
   {
+    id: '17',
+    title: 'Formatted Time',
+    descripcionCorta: 'Formateador de tiempo para JavaScript',
+    image: '/img/proyecto-formateador.png',
+    url: '/proyecto/17',
+    description: '',
+    technologies: ['Astro', 'TypeScript'],
+    demoUrl: 'https://formatted-time.vercel.app/',
+    githubUrl: 'https://github.com/OrlandoTellez/formatted-time'
+  },
+  {
     id: '16',
     title: 'Hardware Web',
     descripcionCorta: '',
